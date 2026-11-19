@@ -1,0 +1,1473 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600&display=swap");
+
+/* ===========================
+        RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#f3f2ee;
+    color:#1b1b1b;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+}
+
+/* ===========================
+      HERO
+=========================== */
+
+.hero{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 60px;
+
+    overflow:hidden;
+    background:#f3f2ee;
+}
+
+/* ===========================
+      GRID
+=========================== */
+
+.grid{
+
+    position:fixed;
+    inset:0;
+
+    z-index:0;
+
+    background-image:
+    radial-gradient(circle,#d6d6d6 1px,transparent 1px);
+
+    background-size:38px 38px;
+
+    animation:gridMove 60s linear infinite;
+
+    pointer-events:none;
+}
+
+@keyframes gridMove{
+
+from{
+background-position:0 0;
+}
+
+to{
+background-position:38px 38px;
+}
+
+}
+
+/* ===========================
+      CONTENT WRAPPER
+=========================== */
+
+.hero-content-wrapper{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+    max-width:1400px;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:2rem;
+
+}
+
+/* ===========================
+      HERO TEXT
+=========================== */
+
+.hero-text-container{
+
+    position:relative;
+
+    z-index:10;
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.hero-greeting{
+
+    font-size:1rem;
+    font-weight:500;
+    color:#4a4a4a;
+
+}
+
+.hero-name{
+
+    display:inline-block;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:clamp(3.5rem, 12vw, 2.2rem);
+
+    font-weight:800;
+
+    line-height:1.05;
+
+    color:#1b1b1b;
+
+    letter-spacing:.02em;
+
+    margin-bottom:.35rem;
+
+    text-shadow:0 4px 18px rgba(0,0,0,.05);
+
+}
+
+.hero-title{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+
+    gap:.6rem;
+
+    margin-bottom:1rem;
+
+    font-size:clamp(0.9rem,10vw,1rem);
+
+    font-weight:1000;
+
+    color:#0f0f0f;
+
+}
+
+.title-dot{
+
+    color:#8b5cf6;
+
+}
+
+.cursor-blink{
+
+    color:#8b5cf6;
+
+    font-size:1.1em;
+
+}
+
+.hero-tagline{
+
+    max-width:700px;
+
+    margin:0 auto 1.7rem;
+
+    padding:0 1rem;
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-size:clamp(.35rem,1vw,0.9rem);
+
+}
+
+/* ===========================
+      BUTTONS
+=========================== */
+
+.hero-cta{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+    display:inline-flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:.8rem 2.4rem;
+
+    border-radius:100px;
+
+    text-decoration:none;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:
+    transform .35s ease,
+    background .35s ease,
+    color .35s ease,
+    box-shadow .35s ease;
+
+}
+
+.btn-primary{
+
+    border:none;
+
+    background:#1b1b1b;
+
+    color:#fff;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    background:#2d2d2d;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.22);
+
+}
+
+.btn-secondary{
+
+    border:2px solid #1b1b1b;
+
+    color:#1b1b1b;
+
+    background:transparent;
+
+}
+
+.btn-secondary:hover{
+
+    background:#1b1b1b;
+
+    color:#fff;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+      SCENE / CARD
+=========================== */
+
+.scene-wrapper{
+    width:100%;
+    position:relative;
+}
+
+.scene{
+
+    position:relative;
+
+    width:100%;
+    height:415px;
+
+    overflow:hidden;
+
+    border:5px solid #fff;
+    border-radius:215px;
+
+    background:#cfe0f8;
+
+    cursor:pointer;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.14);
+
+    animation:sceneFloat 6s ease-in-out infinite;
+
+    transform:translateZ(0);
+    will-change:transform;
+}
+
+@keyframes sceneFloat{
+
+0%,100%{
+transform:translate3d(0,0,0);
+}
+
+50%{
+transform:translate3d(0,-4px,0);
+}
+
+}
+
+/* ===========================
+      GLOW
+=========================== */
+
+.scene::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+radial-gradient(circle at center,
+rgba(255,255,255,.18),
+transparent 70%);
+
+pointer-events:none;
+
+z-index:30;
+
+}
+
+.scene::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+bottom:-30px;
+
+width:360px;
+height:45px;
+
+transform:translateX(-50%);
+
+border-radius:50%;
+
+background:rgba(0,0,0,.12);
+
+filter:blur(24px);
+
+z-index:-1;
+
+}
+
+/* ===========================
+      IMAGE DEFAULT
+=========================== */
+
+.scene img{
+
+position:absolute;
+
+user-select:none;
+
+pointer-events:none;
+
+transition:transform .45s ease;
+
+will-change:transform;
+
+transform:translateZ(0);
+
+backface-visibility:hidden;
+
+-webkit-backface-visibility:hidden;
+
+filter:drop-shadow(0 10px 18px rgba(0,0,0,.16));
+
+}
+
+/* ===========================
+      OBJECT POSITIONING
+=========================== */
+
+/* Sphere */
+
+.sphere{
+
+width:408px;
+
+left:59%;
+top:-197px;
+
+transform:translateX(-50%);
+
+z-index:2;
+
+}
+
+/* Hand */
+
+.hand{
+
+width:453px;
+
+left:50%;
+top:-79px;
+
+transform:translateX(-50%);
+
+z-index:10;
+
+}
+
+/* Notebook */
+
+.notebook{
+
+width:374px;
+
+left:20%;
+top:118px;
+
+z-index:3;
+
+}
+
+/* Keyboard */
+
+.keyboard{
+
+width:304px;
+
+left:31%;
+
+top:106px;
+
+z-index:20;
+
+}
+
+/* Tape */
+
+.tape{
+
+width:435px;
+
+left:1%;
+bottom:-216px;
+
+z-index:25;
+
+}
+
+/* Diamond */
+
+.diamond{
+
+width:150px;
+
+left:57%;
+top:-55px;
+
+transform:translateX(-50%);
+
+z-index:18;
+
+}
+
+/* Glass Card */
+
+.glassCard{
+
+width:431px;
+
+right:16%;
+top:-191px;
+
+z-index:8;
+
+}
+
+/* Orange Card */
+
+.orangeCard{
+
+width:345px;
+
+right:9%;
+top:-37px;
+
+z-index:7;
+
+}
+/* ===========================
+      HOVER EFFECTS
+=========================== */
+
+.scene:hover{
+    box-shadow:0 28px 60px rgba(0,0,0,.18);
+}
+
+.scene:hover .hand{
+    transform:translateX(-50%) translateY(-8px) rotate(-2deg);
+}
+
+.scene:hover .sphere{
+    transform:translateX(-50%) translateY(-8px);
+}
+
+.scene:hover .glassCard{
+    transform:translateY(-8px) rotate(6deg);
+}
+
+.scene:hover .orangeCard{
+    transform:translateY(-8px) rotate(-6deg);
+}
+
+.scene:hover .diamond{
+    transform:translateX(-50%) translateY(-8px) rotate(15deg);
+}
+
+.scene:hover .keyboard{
+    transform:translateY(-6px);
+}
+
+.scene:hover .notebook{
+    transform:translateY(-5px) rotate(-4deg);
+}
+
+.scene:hover .tape{
+    transform:rotate(-6deg);
+}
+
+/* ===========================
+      FLOATING ANIMATIONS
+=========================== */
+
+.hand{
+    animation:handFloat 7s ease-in-out infinite;
+}
+
+@keyframes handFloat{
+
+0%,100%{
+transform:translate3d(-50%,0,0) rotate(0deg);
+}
+
+25%{
+transform:translate3d(-50%,-6px,0) rotate(-1deg);
+}
+
+50%{
+transform:translate3d(-50%,-14px,0) rotate(1deg);
+}
+
+75%{
+transform:translate3d(-50%,-8px,0) rotate(-1deg);
+}
+
+}
+
+/* Sphere */
+
+.sphere{
+    animation:sphereFloat 6s ease-in-out infinite;
+}
+
+@keyframes sphereFloat{
+
+0%,100%{
+transform:translate3d(-50%,0,0);
+}
+
+50%{
+transform:translate3d(-50%,-12px,0);
+}
+
+}
+
+/* Notebook */
+
+.notebook{
+    animation:notebookFloat 7.5s ease-in-out infinite;
+    transform-origin:center;
+}
+
+@keyframes notebookFloat{
+
+0%,100%{
+transform:translateY(0) rotate(0deg);
+}
+
+50%{
+transform:translateY(-6px) rotate(-4deg);
+}
+
+}
+
+/* Keyboard */
+
+.keyboard{
+    animation:keyFloat 6.5s ease-in-out infinite;
+}
+
+@keyframes keyFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-6px);
+}
+
+}
+
+/* Glass Card */
+
+.glassCard{
+    animation:glassFloat 7s ease-in-out infinite;
+    transform-origin:center;
+}
+
+@keyframes glassFloat{
+
+0%,100%{
+transform:translateY(0) rotate(0deg);
+}
+
+50%{
+transform:translateY(-8px) rotate(5deg);
+}
+
+}
+
+/* Orange Card */
+
+.orangeCard{
+    animation:orangeFloat 6.5s ease-in-out infinite;
+    transform-origin:center;
+}
+
+@keyframes orangeFloat{
+
+0%,100%{
+transform:translateY(0) rotate(0deg);
+}
+
+50%{
+transform:translateY(-8px) rotate(-6deg);
+}
+
+}
+
+/* Diamond */
+
+.diamond{
+    animation:diamondFloat 5.5s ease-in-out infinite;
+}
+
+@keyframes diamondFloat{
+
+0%,100%{
+transform:translateX(-50%) translateY(0) rotate(0deg);
+}
+
+50%{
+transform:translateX(-50%) translateY(-10px) rotate(18deg);
+}
+
+}
+
+/* Tape */
+
+.tape{
+    animation:tapeFloat 8s ease-in-out infinite;
+    transform-origin:80% 20%;
+}
+
+@keyframes tapeFloat{
+
+0%,100%{
+transform:rotate(0deg);
+}
+
+50%{
+transform:rotate(-5deg);
+}
+
+}
+
+/* ===========================
+      PERFORMANCE
+=========================== */
+
+.scene img{
+
+    will-change:transform;
+
+    backface-visibility:hidden;
+
+    -webkit-backface-visibility:hidden;
+
+    transform-style:preserve-3d;
+
+}
+/* ===========================
+      FOOTER
+=========================== */
+
+.footer{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:0 10px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.year{
+
+    display:flex;
+    align-items:center;
+    gap:2px;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:72px;
+    font-weight:800;
+
+    color:#1b1b1b;
+
+}
+
+.roll{
+
+    width:.65em;
+    height:1em;
+
+    overflow:hidden;
+
+    display:flex;
+
+}
+
+.rollNumbers{
+
+    display:flex;
+    flex-direction:column;
+
+    animation:yearRoll 5s ease-in-out infinite;
+
+}
+
+.rollNumbers span{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:1em;
+
+}
+
+@keyframes yearRoll{
+
+0%,25%{
+
+transform:translateY(0);
+
+}
+
+40%,70%{
+
+transform:translateY(-100%);
+
+}
+
+85%,100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.smile{
+
+width:60px;
+height:60px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+border-radius:50%;
+border:3px solid #1b1b1b;
+
+font-size:22px;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.smile:hover{
+
+transform:rotate(15deg) scale(1.05);
+
+}
+
+/* ===========================
+      1200px
+=========================== */
+
+@media (max-width:1200px){
+
+.hero{
+
+padding:35px;
+
+}
+
+.scene{
+
+height:390px;
+
+}
+
+.hand{
+
+width:430px;
+top:-78px;
+
+}
+
+.notebook{
+
+width:309px;
+
+left:14%;
+top:72px;
+
+}
+
+.orangeCard{
+
+width:224px;
+
+right:4%;
+top:36px;
+
+}
+
+.glassCard{
+
+width:291px;
+
+right:9%;
+top:-82px;
+
+}
+
+.keyboard{
+
+width:140px;
+
+left:23%;
+top:248px;
+
+}
+
+.tape{
+
+width:283px;
+
+left:0;
+
+bottom:-99px!important;
+
+}
+
+.diamond{
+
+width:70px!important;
+
+top:3px!important;
+
+}
+
+.sphere{
+
+width:310px!important;
+
+top:-120px!important;
+
+left:59%!important;
+
+}
+
+}
+
+/* ===========================
+      900px
+=========================== */
+
+@media (max-width:900px){
+
+.hero{
+
+padding:28px 20px;
+
+}
+
+.scene{
+
+height:360px;
+border-radius:160px;
+
+}
+
+.hand{
+
+width:360px;
+
+top:-70px;
+
+left:50%;
+
+}
+
+.notebook{
+
+width:250px;
+
+left:12%;
+top:82px;
+
+}
+
+.keyboard{
+
+        width: 128px;
+        left: 33%;
+        top: 190px;
+
+}
+
+.orangeCard{
+
+width:185px;
+
+right:3%;
+top:48px;
+
+}
+
+.glassCard{
+
+width:235px;
+
+right:8%;
+top:-60px;
+
+}
+
+.tape{
+
+width:220px;
+
+left:0;
+
+bottom:-75px!important;
+
+}
+
+.diamond{
+
+width:58px!important;
+
+top:12px!important;
+
+}
+
+.sphere{
+
+width:245px!important;
+
+top:-95px!important;
+
+left:59%!important;
+
+}
+
+.hero-name{
+
+font-size:clamp(2.8rem,9vw,4.5rem);
+
+}
+
+.hero-title{
+
+font-size:1.2rem;
+
+}
+
+.footer{
+
+flex-wrap:wrap;
+
+}
+
+.year{
+
+font-size:48px;
+
+}
+
+.smile{
+
+width:50px;
+height:50px;
+
+}
+
+}
+/* ===========================
+      600px
+=========================== */
+
+@media (max-width:600px){
+
+.hero{
+    padding:20px 16px;
+}
+
+.hero-content-wrapper{
+    gap:1.5rem;
+}
+
+.scene{
+    height:300px;
+    border-radius:120px;
+}
+
+/* Center Objects */
+
+.hand{
+    width:280px;
+    left:50%;
+    top:-48px;
+    transform:translateX(-50%);
+}
+
+.sphere{
+    width:180px!important;
+    left:59%!important;
+    top:-70px!important;
+    transform:translateX(-50%);
+}
+
+.diamond{
+    width:42px!important;
+    left:57%;
+    top:12px!important;
+    transform:translateX(-50%);
+}
+
+/* Left Objects */
+
+.notebook{
+    width:190px;
+    left:10%;
+    top:78px;
+}
+
+.keyboard{
+    width: 94px;
+        left: 29%;
+        top: 169px;
+}
+
+.tape{
+    width:170px;
+    left:-2%;
+    bottom:-58px!important;
+}
+
+/* Right Objects */
+
+.glassCard{
+    width:175px;
+    right:5%;
+    top:-32px;
+}
+
+.orangeCard{
+    width:140px;
+    right:2%;
+    top:45px;
+}
+
+/* Text */
+
+.hero-name{
+    font-size:clamp(2rem,10vw,2.8rem);
+}
+
+.hero-title{
+    font-size:1rem;
+    gap:.4rem;
+}
+
+.hero-tagline{
+    font-size:.9rem;
+}
+
+.hero-cta{
+    gap:.8rem;
+}
+
+.btn-primary,
+.btn-secondary{
+
+    padding:.7rem 1.4rem;
+
+    font-size:.85rem;
+
+}
+
+.footer{
+
+    margin-top:18px;
+
+}
+
+.year{
+
+    font-size:36px;
+
+}
+
+.smile{
+
+    width:44px;
+    height:44px;
+
+    font-size:18px;
+
+}
+
+}
+
+
+/* ===========================
+      360px
+=========================== */
+
+@media (max-width:360px){
+
+.hero{
+
+padding:16px 12px;
+
+}
+
+.scene{
+
+height:245px;
+
+border-radius:90px;
+
+}
+
+/* Center */
+
+.hand{
+
+width:220px;
+
+top:-36px;
+
+left:50%;
+
+}
+
+.sphere{
+
+width:135px!important;
+
+top:-52px!important;
+
+left:59%!important;
+
+}
+
+.diamond{
+
+width:34px!important;
+
+top:8px!important;
+
+left:57%;
+
+}
+
+/* Left */
+
+.notebook{
+
+width:145px;
+
+left:8%;
+
+top:66px;
+
+}
+
+.keyboard{
+
+width:68px;
+
+left:24%;
+
+top:154px;
+
+}
+
+.tape{
+
+width:125px;
+
+left:-4%;
+
+bottom:-42px!important;
+
+}
+
+/* Right */
+
+.glassCard{
+
+width:132px;
+
+right:3%;
+
+top:-18px;
+
+}
+
+.orangeCard{
+
+width:108px;
+
+right:1%;
+
+top:40px;
+
+}
+
+/* Text */
+
+.hero-name{
+
+font-size:1.8rem;
+
+}
+
+.hero-title{
+
+font-size:.88rem;
+
+}
+
+.hero-tagline{
+
+font-size:.82rem;
+
+padding:0;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+padding:.6rem 1.1rem;
+
+font-size:.8rem;
+
+}
+
+.footer{
+
+gap:10px;
+
+}
+
+.year{
+
+font-size:30px;
+
+}
+
+.smile{
+
+width:38px;
+height:38px;
+
+font-size:15px;
+
+}
+
+}
+
+
+/* ===========================
+      MOBILE PERFORMANCE
+=========================== */
+
+@media (max-width:768px){
+
+.grid{
+
+animation:none;
+
+}
+
+.scene{
+
+animation-duration:8s;
+
+}
+
+.scene img{
+
+transition:transform .35s ease;
+
+will-change:auto;
+
+}
+
+.hand,
+.sphere,
+.notebook,
+.keyboard,
+.orangeCard,
+.glassCard,
+.tape,
+.diamond{
+
+animation-duration:8s;
+
+}
+
+}
+
+
+
+
+/* =========================================
+   ANIMATED PORTFOLIO TEXT STYLES
+   ========================================= */
+
+.portfolio-text {
+  font-size: 100px;
+  font-weight: 700;
+  color: #1b1b1b;
+  display: flex;
+  justify-content: center; /* Centers the text */
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+  line-height: 1;
+  width: 100%;
+}
+
+/* Individual letters fade in sequentially */
+.portfolio-text .letter {
+  opacity: 0;
+  animation: fadeInLetter 0.2s forwards;
+}
+.portfolio-text .p { animation-delay: 0s; }
+.portfolio-text .o { animation-delay: 0s; }
+.portfolio-text .r { animation-delay: 0.5s; }
+.portfolio-text .t { animation-delay: 0.7s; }
+.portfolio-text .f { animation-delay: 0.9s; }
+.portfolio-text .l { animation-delay: 1.3s; }
+.portfolio-text .i { animation-delay: 1.5s; }
+
+@keyframes fadeInLetter {
+  to { opacity: 1; }
+}
+
+/* SVG Wrapper - fixes alignment for the drawing 'o' */
+.o-svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -10px; /* Pulls it closer to P and r */
+}
+
+/* Morphing O */
+.portfolio-text .o-morph {
+  display: inline-block;
+  padding: 0 2px;
+}
+
+/* Responsive sizing for smaller screens */
+@media (max-width: 992px) {
+  .portfolio-text {
+    font-size: 90px;
+  }
+  .o-svg-wrapper svg {
+    width: 55px;
+    height: 55px;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio-text {
+    font-size: 70px;
+  }
+  .o-svg-wrapper svg {
+    width: 42px;
+    height: 42px;
+    margin: 0 -5px;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio-text {
+    font-size: 45px;
+  }
+  .o-svg-wrapper svg {
+    width: 28px;
+    height: 28px;
+    margin: 0 -4px;
+  }
+}

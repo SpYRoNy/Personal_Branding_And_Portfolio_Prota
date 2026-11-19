@@ -1,0 +1,559 @@
+/* ============================================================
+   Thank You / Contact Success — shares the Hero's design tokens:
+   #1b1b1b ink, #8b5cf6 accent, #f3f2ee background, Poppins/Inter
+   ============================================================ */
+
+.ty-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 64px 40px 96px;
+  background: #f3f0e6a3;
+  font-family: "Inter", sans-serif;
+  color: #1b1b1b;
+  isolation: isolate;
+}
+
+/* ---------- background layers ---------- */
+
+.ty-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(circle, #d6d6d6 1px, transparent 1px);
+  background-size: 38px 38px;
+  pointer-events: none;
+}
+
+.ty-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.ty-blob-a {
+  width: 460px;
+  height: 460px;
+  top: -140px;
+  left: -120px;
+  background: radial-gradient(circle, #cfe0f8, transparent 70%);
+}
+
+.ty-blob-b {
+  width: 380px;
+  height: 380px;
+  bottom: -160px;
+  right: -100px;
+  background: radial-gradient(circle, #e6d8ff, transparent 70%);
+}
+
+.ty-blob-c {
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  right: 8%;
+  background: radial-gradient(circle, #ffe3c2, transparent 70%);
+  opacity: 0.4;
+}
+
+.ty-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ty-particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  opacity: 0.35;
+  animation: ty-float-particle 9s ease-in-out infinite;
+}
+
+.p-0 { top: 12%; left: 8%; animation-delay: 0s; }
+.p-1 { top: 22%; left: 82%; animation-delay: 1.2s; }
+.p-2 { top: 68%; left: 14%; animation-delay: 2.1s; }
+.p-3 { top: 78%; left: 88%; animation-delay: 0.6s; }
+.p-4 { top: 40%; left: 4%; animation-delay: 1.8s; }
+.p-5 { top: 8%; left: 55%; animation-delay: 2.6s; }
+.p-0, .p-1, .p-2, .p-3, .p-4, .p-5 { }
+.ty-particle.p-0 { background: #8b5cf6; }
+.ty-particle.p-1 { background: #4a90d9; }
+.ty-particle.p-2 { background: #e8834a; }
+.ty-particle.p-3 { background: #8b5cf6; }
+.ty-particle.p-4 { background: #4a90d9; }
+.ty-particle.p-5 { background: #e8834a; }
+
+@keyframes ty-float-particle {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.3; }
+  50% { transform: translate3d(0, -18px, 0); opacity: 0.7; }
+}
+
+/* ---------- content ---------- */
+
+.ty-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ty-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 14px;
+}
+
+.ty-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8b5cf6;
+}
+
+.ty-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: clamp(3.4rem, 12vw, 9.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 0.35em;
+}
+
+.ty-heading-word {
+  display: inline-block;
+}
+
+.ty-smile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.5em;
+  height: 0.5em;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  border: 2.5px solid #1b1b1b;
+  margin-left: 12px;
+  color: #1b1b1b;
+}
+
+/* ---------- typing line ---------- */
+
+.ty-typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(27, 27, 27, 0.08);
+  border-radius: 100px;
+  padding: 10px 22px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  color: #2d2d2d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  margin-bottom: 18px;
+  min-height: 20px;
+}
+
+.ty-typing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  flex-shrink: 0;
+}
+
+.ty-typing-text {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ty-cursor {
+  color: #8b5cf6;
+  font-weight: 600;
+  animation: ty-blink 0.8s step-end infinite;
+}
+
+@keyframes ty-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ---------- success message ---------- */
+
+.ty-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 460px;
+  margin: 0 auto 8px;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.ty-success-check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1b1b1b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+/* ---------- center scene ---------- */
+
+.ty-scene {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 46px 0 12px;
+}
+
+.ty-scene-inner {
+  position: relative;
+  width: 100%;
+  height: 360px;
+}
+
+.ty-obj {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.14));
+  will-change: transform;
+}
+
+.ty-sphere {
+  width: 220px;
+  left: 50%;
+  top: -60px;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: ty-float-a 6s ease-in-out infinite;
+}
+
+.ty-diamond {
+  width: 70px;
+  left: 66%;
+  top: -20px;
+  z-index: 6;
+  animation: ty-float-b 5.5s ease-in-out infinite;
+}
+
+.ty-glassCard {
+  width: 190px;
+  right: 4%;
+  top: -30px;
+  z-index: 4;
+  animation: ty-float-c 7s ease-in-out infinite;
+}
+
+.ty-orangeCard {
+  width: 150px;
+  right: 12%;
+  top: 60px;
+  z-index: 3;
+  animation: ty-float-b 6.5s ease-in-out infinite;
+}
+
+.ty-notebook {
+  width: 170px;
+  left: 4%;
+  top: 70px;
+  z-index: 3;
+  animation: ty-float-c 7.5s ease-in-out infinite;
+}
+
+.ty-keyboard {
+  width: 210px;
+  left: 18%;
+  top: 190px;
+  z-index: 8;
+  transform: rotate(-6deg);
+  animation: ty-keyboard-float 6.5s ease-in-out infinite;
+}
+
+.ty-tape {
+  width: 130px;
+  left: 0;
+  bottom: -6px;
+  z-index: 5;
+  animation: ty-float-a 8s ease-in-out infinite;
+}
+
+.ty-hand {
+  width: 260px;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  z-index: 10;
+  animation: ty-hand-type 2.4s ease-in-out infinite;
+}
+
+@keyframes ty-float-a {
+  0%, 100% { transform: translate3d(-50%, 0, 0); }
+  50% { transform: translate3d(-50%, -10px, 0); }
+}
+
+@keyframes ty-float-b {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(6deg); }
+}
+
+@keyframes ty-float-c {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(-4deg); }
+}
+
+@keyframes ty-keyboard-float {
+  0%, 100% { transform: rotate(-6deg) translateY(0); }
+  50% { transform: rotate(-4deg) translateY(-4px); }
+}
+
+@keyframes ty-hand-type {
+  0%, 100% { transform: translate3d(-50%, 0, 0) rotate(0deg); }
+  30% { transform: translate3d(-50%, 4px, 0) rotate(-1deg); }
+  60% { transform: translate3d(-50%, 0, 0) rotate(1deg); }
+}
+
+/* ---------- floating contact pills ---------- */
+
+.ty-pill {
+  position: absolute;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(27, 27, 27, 0.08);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: #1b1b1b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.ty-pill:hover {
+  box-shadow: 0 16px 36px rgba(139, 92, 246, 0.28);
+}
+
+.ty-pill-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.ty-pill-email {
+  top: 6%;
+  left: -6%;
+}
+
+.ty-pill-linkedin {
+  bottom: 8%;
+  left: -4%;
+}
+
+.ty-pill-github {
+  top: 2%;
+  right: -6%;
+}
+
+.ty-pill-resume {
+  bottom: 4%;
+  right: -2%;
+}
+
+/* ---------- CTA buttons ---------- */
+
+.ty-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 28px;
+}
+
+.ty-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.6rem;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.ty-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent 60%);
+  transition: opacity 0.4s ease;
+}
+
+.ty-btn:hover::after {
+  opacity: 1;
+}
+
+.ty-btn-primary {
+  border: none;
+  background: #1b1b1b;
+  color: #fff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+.ty-btn-primary:hover {
+  background: #2d2d2d;
+  box-shadow: 0 16px 38px rgba(139, 92, 246, 0.3);
+}
+
+.ty-btn-secondary {
+  border: 2px solid #1b1b1b;
+  color: #1b1b1b;
+  background: transparent;
+}
+
+.ty-btn-secondary:hover {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .ty-scene-inner {
+    height: 300px;
+  }
+
+  .ty-hand { width: 210px; top: 90px; }
+  .ty-sphere { width: 170px; top: -40px; }
+  .ty-keyboard { width: 170px; top: 160px; left: 12%; }
+  .ty-glassCard { width: 150px; }
+  .ty-orangeCard { width: 120px; top: 50px; }
+  .ty-notebook { width: 140px; }
+  .ty-diamond { width: 56px; }
+  .ty-tape { width: 105px; }
+
+  .ty-pill {
+    font-size: 0.78rem;
+    padding: 8px 14px;
+  }
+
+  .ty-pill-email { left: -2%; }
+  .ty-pill-github { right: -2%; }
+}
+
+@media (max-width: 640px) {
+  .ty-page {
+    padding: 48px 20px 72px;
+  }
+
+  .ty-heading {
+    gap: 0 0.2em;
+  }
+
+  .ty-smile {
+    min-width: 32px;
+    min-height: 32px;
+    margin-left: 6px;
+  }
+
+  .ty-scene {
+    max-width: 420px;
+  }
+
+  .ty-scene-inner {
+    height: 260px;
+  }
+
+  .ty-hand { width: 160px; top: 70px; }
+  .ty-sphere { width: 130px; top: -28px; }
+  .ty-keyboard { width: 130px; top: 130px; left: 8%; }
+  .ty-glassCard { width: 110px; top: -10px; right: -2%; }
+  .ty-orangeCard { width: 90px; top: 40px; right: 4%; }
+  .ty-notebook { width: 100px; top: 60px; }
+  .ty-diamond { width: 42px; }
+  .ty-tape { width: 80px; }
+
+  /* Pills stack below the scene instead of floating on top of it,
+     to avoid overlap/clipping on small screens */
+  .ty-scene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ty-pill {
+    position: static;
+    margin: 6px;
+  }
+
+  .ty-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ty-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .ty-typing {
+    padding: 8px 16px;
+    font-size: 0.78rem;
+  }
+
+  .ty-success {
+    font-size: 0.85rem;
+  }
+}

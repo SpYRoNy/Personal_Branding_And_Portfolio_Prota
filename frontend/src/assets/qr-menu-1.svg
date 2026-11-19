@@ -1,0 +1,95 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Spice Route QR restaurant menu app mockup</title>
+<desc>A phone screen showing the Spice Route restaurant menu app with categories and dish cards, next to a QR code scan panel</desc>
+
+<rect width="800" height="600" fill="#fbeae2"/>
+
+<circle cx="120" cy="90" r="70" fill="#f6d9c8"/>
+<circle cx="700" cy="500" r="90" fill="#f6d9c8"/>
+
+<g>
+  <rect x="60" y="70" width="300" height="460" rx="32" fill="#1f1310"/>
+  <rect x="72" y="90" width="276" height="420" rx="20" fill="#fff8f2"/>
+
+  <rect x="72" y="90" width="276" height="86" rx="20" fill="#c8551f"/>
+  <rect x="72" y="150" width="276" height="26" fill="#c8551f"/>
+  <text x="94" y="128" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#fff8f2">Spice Route</text>
+  <text x="94" y="150" font-family="Arial, sans-serif" font-size="12" fill="#f6d9c8">Table 07 &#183; Scan &amp; order</text>
+
+  <rect x="94" y="192" width="70" height="26" rx="13" fill="#c8551f"/>
+  <text x="112" y="209" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#fff8f2">Starters</text>
+  <rect x="172" y="192" width="60" height="26" rx="13" fill="#f6d9c8"/>
+  <text x="187" y="209" font-family="Arial, sans-serif" font-size="11" fill="#8a3c17">Mains</text>
+  <rect x="240" y="192" width="66" height="26" rx="13" fill="#f6d9c8"/>
+  <text x="253" y="209" font-family="Arial, sans-serif" font-size="11" fill="#8a3c17">Desserts</text>
+
+  <g>
+    <rect x="94" y="234" width="234" height="78" rx="14" fill="#fdece2" stroke="#f0c7ac" stroke-width="1"/>
+    <rect x="106" y="246" width="54" height="54" rx="10" fill="#e59a63"/>
+    <text x="172" y="264" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#3a2115">Paneer Tikka</text>
+    <text x="172" y="282" font-family="Arial, sans-serif" font-size="11" fill="#8a6a56">Char-grilled, mint chutney</text>
+    <text x="172" y="300" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#c8551f">&#8377;220</text>
+  </g>
+
+  <g>
+    <rect x="94" y="322" width="234" height="78" rx="14" fill="#fdece2" stroke="#f0c7ac" stroke-width="1"/>
+    <rect x="106" y="334" width="54" height="54" rx="10" fill="#d97a44"/>
+    <text x="172" y="352" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#3a2115">Butter Chicken</text>
+    <text x="172" y="370" font-family="Arial, sans-serif" font-size="11" fill="#8a6a56">Creamy tomato, naan side</text>
+    <text x="172" y="388" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#c8551f">&#8377;340</text>
+  </g>
+
+  <g>
+    <rect x="94" y="410" width="234" height="78" rx="14" fill="#fdece2" stroke="#f0c7ac" stroke-width="1"/>
+    <rect x="106" y="422" width="54" height="54" rx="10" fill="#c8551f"/>
+    <text x="172" y="440" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#3a2115">Masala Chai</text>
+    <text x="172" y="458" font-family="Arial, sans-serif" font-size="11" fill="#8a6a56">Spiced, hand-brewed</text>
+    <text x="172" y="476" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#c8551f">&#8377;70</text>
+  </g>
+</g>
+
+<g>
+  <rect x="440" y="150" width="300" height="230" rx="20" fill="#ffffff" stroke="#f0c7ac" stroke-width="1"/>
+  <text x="466" y="188" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#3a2115">Scan to order</text>
+  <text x="466" y="206" font-family="Arial, sans-serif" font-size="11" fill="#8a6a56">Menu opens instantly &#8212; no app needed</text>
+
+  <g transform="translate(466,224)">
+    <rect width="120" height="120" fill="#1f1310"/>
+    <rect x="8" y="8" width="30" height="30" fill="#ffffff"/>
+    <rect x="16" y="16" width="14" height="14" fill="#1f1310"/>
+    <rect x="82" y="8" width="30" height="30" fill="#ffffff"/>
+    <rect x="90" y="16" width="14" height="14" fill="#1f1310"/>
+    <rect x="8" y="82" width="30" height="30" fill="#ffffff"/>
+    <rect x="16" y="90" width="14" height="14" fill="#1f1310"/>
+    <rect x="48" y="8" width="10" height="10" fill="#ffffff"/>
+    <rect x="64" y="8" width="10" height="10" fill="#ffffff"/>
+    <rect x="48" y="24" width="10" height="10" fill="#ffffff"/>
+    <rect x="48" y="48" width="10" height="10" fill="#ffffff"/>
+    <rect x="64" y="48" width="10" height="10" fill="#ffffff"/>
+    <rect x="80" y="48" width="10" height="10" fill="#ffffff"/>
+    <rect x="96" y="48" width="10" height="10" fill="#ffffff"/>
+    <rect x="48" y="64" width="10" height="10" fill="#ffffff"/>
+    <rect x="80" y="64" width="10" height="10" fill="#ffffff"/>
+    <rect x="48" y="80" width="10" height="10" fill="#ffffff"/>
+    <rect x="64" y="80" width="10" height="10" fill="#ffffff"/>
+    <rect x="96" y="80" width="10" height="10" fill="#ffffff"/>
+    <rect x="48" y="96" width="10" height="10" fill="#ffffff"/>
+    <rect x="80" y="96" width="10" height="10" fill="#ffffff"/>
+    <rect x="96" y="96" width="10" height="10" fill="#ffffff"/>
+  </g>
+</g>
+
+<g>
+  <rect x="440" y="404" width="300" height="126" rx="20" fill="#c8551f"/>
+  <text x="466" y="436" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#fff8f2">Live admin dashboard</text>
+  <text x="466" y="458" font-family="Arial, sans-serif" font-size="11" fill="#f6d9c8">Manage menu items and track orders</text>
+
+  <rect x="466" y="474" width="70" height="34" rx="8" fill="#fff8f2"/>
+  <text x="479" y="495" font-family="Arial, sans-serif" font-size="10" fill="#8a3c17">Orders</text>
+  <rect x="546" y="474" width="70" height="34" rx="8" fill="#fff8f2"/>
+  <text x="560" y="495" font-family="Arial, sans-serif" font-size="10" fill="#8a3c17">Menu</text>
+  <rect x="626" y="474" width="90" height="34" rx="8" fill="#fff8f2"/>
+  <text x="640" y="495" font-family="Arial, sans-serif" font-size="10" fill="#8a3c17">Categories</text>
+</g>
+
+</svg>
